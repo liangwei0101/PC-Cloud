@@ -5,8 +5,13 @@ import 'action.dart';
 import 'state.dart';
 
 Widget buildView(HomeComponentState state, Dispatch dispatch, ViewService viewService) {
+ print('我是渲染啊！！！！');
   return Scaffold(
-    body: Text('我是Home页'),
+    appBar: AppBar(
+      backgroundColor: state.themeColor,
+      title: const Text('Todo'),
+    ),
+    body: Text('pppppp'),
     floatingActionButton: FloatingActionButton(
       onPressed: () {
         dispatch(HomeComponentActionCreator.onUploadFileAction());

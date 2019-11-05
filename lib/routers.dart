@@ -27,6 +27,7 @@ final AbstractRoutes routes = PageRoutes(
                 final Object copy = pageState.clone();
                 final GlobalBaseState newState = copy;
                 newState.themeColor = appState.themeColor;
+                newState.uploadingFileList = appState.uploadingFileList;
                 newState.assetPathEntityList = appState.assetPathEntityList;
                 return newState;
               }

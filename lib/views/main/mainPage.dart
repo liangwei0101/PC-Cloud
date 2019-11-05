@@ -8,7 +8,6 @@ import 'uploading/uploadingPage.dart';
 /// MainPage 状态保持
 /// @author Liang Wei
 /// date 2019-11-03
-
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => _MainPageState();

@@ -10,13 +10,6 @@ class HomeComponentPage extends Page<HomeComponentState, Map<String, dynamic>> {
       : super(
             initState: initState,
             effect: buildEffect(),
-            reducer: buildReducer(),
-            view: buildView,
-            dependencies: Dependencies<HomeComponentState>(
-                adapter: null,
-                slots: <String, Dependent<HomeComponentState>>{
-                }),
-            middleware: <Middleware<HomeComponentState>>[
-            ],);
+            view: buildView,);
 
 }

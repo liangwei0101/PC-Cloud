@@ -13,7 +13,8 @@ Reducer<GlobalState> buildReducer() {
   return asReducer(
     <Object, Reducer<GlobalState>>{
       GlobalAction.changeThemeColor: _onchangeThemeColor,
-      GlobalAction.saveAssetPathEntityList: _onSaveAssetPathEntityList
+      GlobalAction.saveAssetPathEntityList: _onSaveAssetPathEntityList,
+      GlobalAction.initUploadingFileList: _onInitUploadingFileList,
     },
   );
 }
@@ -33,4 +34,9 @@ GlobalState _onchangeThemeColor(GlobalState state, Action action) {
 
 GlobalState _onSaveAssetPathEntityList(GlobalState state, Action action) {
   return state.clone()..assetPathEntityList = action.payload;
+}
+
+GlobalState _onInitUploadingFileList(GlobalState state, Action action) {
+  print('初始化');
+  return state.clone()..uploadingFileList = action.payload;
 }
